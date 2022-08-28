@@ -11,6 +11,11 @@ website:
         text: Home
       - about.qmd
     background: "#00A4CF"
+  page-footer: 
+    left: "Content created by Marcus Beck" 
+    right: 
+      - icon: github
+        href: https://github.com/massbays-tech/intro-to-r
 
 format:
   html:
