@@ -23,10 +23,8 @@ jobs:
           r-version: '4.2.0'
 
       - name: Install R Dependencies
-        uses: r-lib/actions/setup-renv@v2
-        with:
-          cache-version: 1
-
+        run: Rscript -e 'install.packages(c("rmarkdown", "jsonlite", "readxl"))'
+      
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
