@@ -2,8 +2,8 @@
 title: "About"
 ---
 
-About this site
+This website provides a short introduction to R for the beta-testing workshop for the [MassWateR](https://massbays-tech.github.io/MassWateR) R package.
 
-```{r}
-1 + 1
-```
+![](figure/logo.png)
+
+All website content created by [Marcus Beck](mailto:mbeck@tbep.org).

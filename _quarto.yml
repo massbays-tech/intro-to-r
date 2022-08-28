@@ -4,6 +4,8 @@ project:
 website:
   title: "Introduction to R"
   navbar:
+    logo: figure/logo.png
+    logo-href: https://massbays-tech.github.io/MassWateR
     left:
       - href: index.qmd
         text: Home
