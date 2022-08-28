@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Introduction to R - Introduction to R: MassWateR beta testing</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Introduction to R</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link active" data-scroll-target="#rstudio">RStudio</a>
+  <ul class="collapse">
+  <li><a href="#open-r-and-rstudio" id="toc-open-r-and-rstudio" class="nav-link" data-scroll-target="#open-r-and-rstudio">Open R and RStudio</a></li>
+  <li><a href="#scripting" id="toc-scripting" class="nav-link" data-scroll-target="#scripting">Scripting</a></li>
+  <li><a href="#executing-code-in-rstudio" id="toc-executing-code-in-rstudio" class="nav-link" data-scroll-target="#executing-code-in-rstudio">Executing code in RStudio</a></li>
+  </ul></li>
+  <li><a href="#r-language-fundamentals" id="toc-r-language-fundamentals" class="nav-link" data-scroll-target="#r-language-fundamentals">R language fundamentals</a>
+  <ul class="collapse">
+  <li><a href="#what-is-the-environment" id="toc-what-is-the-environment" class="nav-link" data-scroll-target="#what-is-the-environment">What is the environment?</a></li>
+  </ul></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a>
+  <ul class="collapse">
+  <li><a href="#cran" id="toc-cran" class="nav-link" data-scroll-target="#cran">CRAN</a></li>
+  <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link" data-scroll-target="#installing-packages">Installing packages</a></li>
+  </ul></li>
+  <li><a href="#data-structures-in-r" id="toc-data-structures-in-r" class="nav-link" data-scroll-target="#data-structures-in-r">Data structures in R</a>
+  <ul class="collapse">
+  <li><a href="#vectors-one-dimensional-data" id="toc-vectors-one-dimensional-data" class="nav-link" data-scroll-target="#vectors-one-dimensional-data">Vectors (one-dimensional data)</a></li>
+  <li><a href="#data-frames-two-dimensional-data" id="toc-data-frames-two-dimensional-data" class="nav-link" data-scroll-target="#data-frames-two-dimensional-data">Data frames (two-dimensional data)</a></li>
+  </ul></li>
+  <li><a href="#getting-your-data-into-r" id="toc-getting-your-data-into-r" class="nav-link" data-scroll-target="#getting-your-data-into-r">Getting your data into R</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to R: MassWateR beta testing</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+</div>
+<section id="rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio">RStudio</h2>
+<p><a href="https://www.rstudio.com/" target="_blank">RStudio</a> is the go-to Interactive Development Environment (IDE) for R. Think of it like a car that is built around an engine. R is the engine and RStudio is the car. Rstudio includes many features to improve the user’s experience.</p>
+<p>Let’s get familiar with RStudio.</p>
+<section id="open-r-and-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="open-r-and-rstudio">Open R and RStudio</h3>
+<p>If you haven’t done so, download and install RStudio from the link above. After it’s installed, find the RStudio shortcut and fire it up. You should see something like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figure/rstudio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="figure/rstudio.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>There are four panes in RStudio:</p>
+<ul>
+<li><strong>Source</strong>: Your primary window for writing code to send to the console, this is where you write and save R “scripts”</li>
+<li><strong>Console</strong>: This is where code is executed in R - you should almost never write code here.</li>
+<li><strong>Environment, History, etc.</strong>: A tabbed window showing your working environment, code execution history, and other useful things</li>
+<li><strong>Files, plots, etc.</strong>: A tabbed window showing a file explorer, a plot window, list of installed packages, help files, and viewer</li>
+</ul>
+</section>
+<section id="scripting" class="level3">
+<h3 class="anchored" data-anchor-id="scripting">Scripting</h3>
+<p>In most cases, you will not enter and execute code directly in the console. Code can be written in a script and then sent directly to the console when you’re ready to run it. The key difference here is that a script can be saved and shared.</p>
+<p>Open a new script from the File menu…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figure/rstudio_script.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="figure/rstudio_script.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="executing-code-in-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="executing-code-in-rstudio">Executing code in RStudio</h3>
+<p>After you write code in your script, it can be sent to the Console to run the code in R. Anything you write in the script will not be run or saved in R until it is sent to the console. There are two ways to do this. First, you can hit the <code>Run</code> button at the top right of the scripting window. Second, you can use <code>ctrl+enter</code> (<code>cmd+enter</code> on a Mac). Both approaches will send the selected line to the console, then move to the next line in your script. You can also highlight and send an entire block of code.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figure/rstudio_run.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="figure/rstudio_run.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="r-language-fundamentals" class="level2">
+<h2 class="anchored" data-anchor-id="r-language-fundamentals">R language fundamentals</h2>
+<p>R is built around functions. These are commands that do specific things based on what you provide. The basic syntax of a function follows the form: <code>function_name(arg1, arg2, ...)</code>.</p>
+<p>With the base install, you will gain access to many functions (2336, to be exact). Some examples:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'hello world!'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "hello world!"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sequence</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random numbers</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1]  8.811902  9.248006 11.343079  9.114192  7.065218  6.940628 10.155095
+  [8] 10.506160  6.662014 11.514695  9.099671 13.488063 10.484846  9.241664
+ [15] 11.299417  8.691436  9.186137 10.113220 12.514531 11.597979  8.338308
+ [22] 12.702822  8.047875  8.599502  6.093155  7.592185  7.283025 13.210215
+ [29] 12.802430  9.292982  7.070364 12.515376 10.965295  8.425382  9.826065
+ [36] 10.466523 11.253185  6.840887  8.759087 11.493254  9.900845  8.654678
+ [43] 11.374917  9.633084  8.765565 12.526241  7.283688 12.629410 10.334910
+ [50] 13.719918  9.562617 10.872909  8.291005 11.918035  9.241927  7.563115
+ [57]  7.896769  7.843202  9.773490 14.088882 10.901712  7.461940  7.525277
+ [64] 13.112719 12.098858  9.742651 12.434622 11.823947 10.541310  9.097314
+ [71] 11.890165 10.707295 10.435295 11.971953 12.519130  7.858018 10.899305
+ [78] 11.218770  7.405111  5.376849 13.398987 12.746739 14.555627  9.589608
+ [85]  7.708700  8.227424 12.211404  9.392969  9.012757 11.389052  9.041660
+ [92] 10.598204  5.638549  6.003111 11.495314 10.752735  6.967121 12.068096
+ [99] 12.080938 10.848513</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># average </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.01933926</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sum</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20.47811</code></pre>
+</div>
+</div>
+<p>Very often you will see functions used like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_random_sum <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In this case the first part of the line is the name of an object. You make this up. Ideally it should have some meaning, but the only rules are that it can’t start with a number and must not have any spaces. The second bit, <code>&lt;-</code>, is the assignment operator. This tells R to take the result of <code>sum(rnorm(100))</code> and store it in an object named, <code>my_random_sum</code>. It is stored in the environment and can be used by just executing it’s name in the console.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_random_sum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -7.293178</code></pre>
+</div>
+</div>
+<section id="what-is-the-environment" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-environment">What is the environment?</h3>
+<p>There are two outcomes when you run code. First, the code will simply print output directly in the console. Second, there is no output because you have stored it as a variable using <code>&lt;-</code>. Output that is stored is actually saved in the <code>environment</code>. The environment is the collection of named objects that are stored in memory for your current R session. Anything stored in memory will be accessible by it’s name without running the original script that was used to create it.</p>
+<p>With this, you have the very basics of how we write R code and save objects that can be used later.</p>
+</section>
+</section>
+<section id="packages" class="level2">
+<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>The base installation of R is quite powerful, but you will soon have a need or desire to go beyond this. Packages provide this ability. They are a standardized way of extending R with new methods, techniques, and programming functionality. There is a lot to say about packages regarding finding them, using them, etc., but for now let’s focus just on the basics.</p>
+<section id="cran" class="level3">
+<h3 class="anchored" data-anchor-id="cran">CRAN</h3>
+<p>One of the reasons for R’s popularity is CRAN, <a href="http://cran.r-project.org/" target="_blank">The Comprehensive R Archive Network</a>. This is where you download R and also where most will gain access to packages (there are other places, but that is for later). Not much else to say about this now other than to be aware of it. As of 2022-08-28, there are 18483 packages on CRAN!</p>
+</section>
+<section id="installing-packages" class="level3">
+<h3 class="anchored" data-anchor-id="installing-packages">Installing packages</h3>
+<p>When a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you so no need to worry about that. In fact, on Windows most of this is pretty automatic.</p>
+<p>We use the <code>install.packages()</code> function to download and install a package. Here, we install the readxl package, then load it using the <code>library()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'readxl'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Installing package into 'C:/Users/mbeck/R/win-library/4.1'
+(as 'lib' is unspecified)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>package 'readxl' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+    C:\Users\mbeck\AppData\Local\Temp\RtmpEZKAHc\downloaded_packages</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>An important aspect of packages is that you only need to download them once, but every time you start RStudio you need to load them with the <code>library()</code> function. Loading a package makes all of its functions available in your current R session.</p>
+</section>
+</section>
+<section id="data-structures-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="data-structures-in-r">Data structures in R</h2>
+<p>Now that you know how to get started in R and how to download packages, we can begin talking about R data structures. Simply put, a data structure is a way for programming languages to handle information storage.</p>
+<section id="vectors-one-dimensional-data" class="level3">
+<h3 class="anchored" data-anchor-id="vectors-one-dimensional-data">Vectors (one-dimensional data)</h3>
+<p>The basic data format in R is a vector - a one-dimensional grouping of elements that have the same type. These are all vectors and they are created with the <code>c</code> function:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>dbl_var <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">2.5</span>, <span class="fl">4.5</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>int_var <span class="ot">&lt;-</span> <span class="fu">c</span>(1L, 6L, 10L)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>log_var <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, T, F)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>chr_var <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The four types of vectors are <code>double</code> (or numeric), <code>integer</code>, <code>logical</code>, and <code>character</code>. Each type has some useful properties:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(dbl_var)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "numeric"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(log_var)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+</section>
+<section id="data-frames-two-dimensional-data" class="level3">
+<h3 class="anchored" data-anchor-id="data-frames-two-dimensional-data">Data frames (two-dimensional data)</h3>
+<p>A collection of vectors represented as one data object are often described as two-dimensional data, or in R speak, a data frame (i.e., <code>data.frame()</code>). Think of them like your standard spreadsheet, where each column describes a variable (vector) and rows link observations between columns. Here’s a simple example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ltrs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>logs <span class="ot">&lt;-</span> <span class="fu">c</span>(T, F, T)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>mydf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(ltrs, nums, logs)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>mydf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  ltrs nums  logs
+1    a    1  TRUE
+2    b    2 FALSE
+3    c    3  TRUE</code></pre>
+</div>
+</div>
+<p>The only constraints required to make a data frame are:</p>
+<ol type="1">
+<li><p>Each column (vector) contains the same type of data</p></li>
+<li><p>The number of observations in each column is equal.</p></li>
+</ol>
+<p>You might also see data frames described as “tibbles”. This is a modern re-envisioning of the data frame. For all practical purposes, you can treat them the same.</p>
+</section>
+</section>
+<section id="getting-your-data-into-r" class="level2">
+<h2 class="anchored" data-anchor-id="getting-your-data-into-r">Getting your data into R</h2>
+<p>It is the rare case when you manually enter your data in R, not to mention impractical for most datasets. Most data analysis workflows typically begin with importing a dataset from an external source. Literally, this means committing a dataset to memory (i.e., storing it as an object) as one of R’s data structure formats. We’ll be using <code>read_excel()</code> function from the readxl package.</p>
+<p>We can import the <code>ExampleSites.xlsx</code> dataset as follows. Note the use of a <em>relative</em> file path. You can see what R is using as your “working directory” using the <code>getwd()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sitdat <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">'data/ExampleSites.xlsx'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s explore the dataset a bit.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the dimensions</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(sitdat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 58  5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the column names</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(sitdat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Monitoring Location ID"        "Monitoring Location Name"     
+[3] "Monitoring Location Latitude"  "Monitoring Location Longitude"
+[5] "Location Group"               </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see the first six rows</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(sitdat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 x 5
+  `Monitoring Location ID` `Monitoring Location Name`    Monit~1 Monit~2 Locat~3
+  &lt;chr&gt;                    &lt;chr&gt;                           &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;  
+1 ABT-010                  477 Lowell Rd, Concord           42.5   -71.4 Lower ~
+2 ABT-026                  Rte 2, Concord                   42.5   -71.4 Lower ~
+3 ABT-033                  Rte 62, W Concord                42.5   -71.4 Lower ~
+4 ABT-044                  Rte 62 (Damonmill), W Concord    42.5   -71.4 Lower ~
+5 ABT-047                  Damonmill dam                    42.5   -71.4 Lower ~
+6 ABT-062                  Rte 62, Acton                    42.4   -71.4 Lower ~
+# ... with abbreviated variable names 1: `Monitoring Location Latitude`,
+#   2: `Monitoring Location Longitude`, 3: `Location Group`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the overall structure</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sitdat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [58 x 5] (S3: tbl_df/tbl/data.frame)
+ $ Monitoring Location ID       : chr [1:58] "ABT-010" "ABT-026" "ABT-033" "ABT-044" ...
+ $ Monitoring Location Name     : chr [1:58] "477 Lowell Rd, Concord" "Rte 2, Concord" "Rte 62, W Concord" "Rte 62 (Damonmill), W Concord" ...
+ $ Monitoring Location Latitude : num [1:58] 42.5 42.5 42.5 42.5 42.5 ...
+ $ Monitoring Location Longitude: num [1:58] -71.4 -71.4 -71.4 -71.4 -71.4 ...
+ $ Location Group               : chr [1:58] "Lower Assabet" "Lower Assabet" "Lower Assabet" "Lower Assabet" ...</code></pre>
+</div>
+</div>
+<p>You can also view a dataset in a spreadsheet style using the <code>View()</code> function:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(sitdat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this lesson we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. We’ve just imported some site data that can be used with the MassWateR package. Next we’ll talk about MassWateR and proceed with the beta testing.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
+
+
+
+</body></html>

@@ -2,12 +2,13 @@ project:
   type: website
 
 website:
-  title: "intro-to-r"
+  title: "Introduction to R"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+    background: "#00A4CF"
 
 format:
   html:
