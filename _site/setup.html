@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Introduction to R - Setup R and RStudio</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <img src="./figure/logo.png" alt="">
+    <span class="navbar-title">Introduction to R</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./setup.html" aria-current="page">Setup</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#install-r-and-rstudio" id="toc-install-r-and-rstudio" class="nav-link active" data-scroll-target="#install-r-and-rstudio">Install R and RStudio</a>
+  <ul class="collapse">
+  <li><a href="#windows-download-and-install-r" id="toc-windows-download-and-install-r" class="nav-link" data-scroll-target="#windows-download-and-install-r"><em>Windows</em>: Download and install R</a></li>
+  <li><a href="#windows-download-and-install-rstudio" id="toc-windows-download-and-install-rstudio" class="nav-link" data-scroll-target="#windows-download-and-install-rstudio"><em>Windows</em>: Download and install RStudio</a></li>
+  <li><a href="#macos-download-and-install-r" id="toc-macos-download-and-install-r" class="nav-link" data-scroll-target="#macos-download-and-install-r"><em>macOS</em>: Download and install R</a></li>
+  <li><a href="#macos-download-and-install-rstudio" id="toc-macos-download-and-install-rstudio" class="nav-link" data-scroll-target="#macos-download-and-install-rstudio"><em>macOS</em>: Download and install RStudio</a></li>
+  </ul></li>
+  <li><a href="#check-install" id="toc-check-install" class="nav-link" data-scroll-target="#check-install">Check Install</a>
+  <ul class="collapse">
+  <li><a href="#open-rstudio" id="toc-open-rstudio" class="nav-link" data-scroll-target="#open-rstudio">Open RStudio</a></li>
+  </ul></li>
+  <li><a href="#rstudio-cloud" id="toc-rstudio-cloud" class="nav-link" data-scroll-target="#rstudio-cloud">RStudio Cloud</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Setup R and RStudio</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Thanks for your interest in the <a href="https://massbays-tech.github.io/MassWateR">MassWateR</a> R package. For the package beta testing, we will be using <a href="https://www.rstudio.com/">RStudio</a> as our interface to R. In order to participate in this testing, you will need to make sure you have R and RStudio installed on your computer.</p>
+<p>Thanks to the <a href="https://owi.usgs.gov/R/training.html">USGS-R Training group</a> and <a href="https://datacarpentry.org/R-ecology-lesson/index.html">Data Carpentry</a> for making their installation materials available. The following instructions come directly from their materials, with a few minor edits to help you get set up.</p>
+<section id="install-r-and-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="install-r-and-rstudio">Install R and RStudio</h2>
+<p><strong>R</strong> and <strong>RStudio</strong> are separate downloads and installations. R is the underlying statistical computing software. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. <em>You need to install R before you install RStudio</em>.</p>
+<section id="windows-download-and-install-r" class="level3">
+<h3 class="anchored" data-anchor-id="windows-download-and-install-r"><em>Windows</em>: Download and install R</h3>
+<p>Go to <a href="https://cran.rstudio.com/bin/windows/base/">CRAN and download</a> the R installer for Windows. Make sure to choose the latest stable version (v4.2.1 as of September 2022).</p>
+<p>Once the installer downloads, Right-click on it and select “Run as administrator”.</p>
+<p>Type in your credentials and click yes (or if you don’t have administrator access have your IT rep install with Admin privileges).</p>
+<p><img src="figure/install_open_as_admin.png" class="img-fluid"></p>
+<p>You can click next through the standard dialogs and accept most defaults. But at the destination screen, please verify that it is installing it to C:\Program Files\R</p>
+<p><img src="figure/install_destination.png" class="img-fluid"></p>
+<p>At the “Select Components” screen, you can accept the default and install both 32-bit and 64-bit versions.</p>
+<p><img src="figure/install_arch_window.png" class="img-fluid"></p>
+<p>At this screen, uncheck ‘Create a desktop icon’ because non-admin users in Windows will be unable to delete it.</p>
+<p><img src="figure/install_tasks.png" class="img-fluid"></p>
+</section>
+<section id="windows-download-and-install-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="windows-download-and-install-rstudio"><em>Windows</em>: Download and install RStudio</h3>
+<p>Download RStudio from <a href="https://www.rstudio.com/products/rstudio/download/#download">here</a>.</p>
+<p>After download, double-click the installer. It will ask for your administrator credentials to install (you might need to have your IT rep install again).</p>
+<p>Accept all the default options for the RStudio install.</p>
+<p><img src="figure/install_rstudio.png" class="img-fluid"></p>
+</section>
+<section id="macos-download-and-install-r" class="level3">
+<h3 class="anchored" data-anchor-id="macos-download-and-install-r"><em>macOS</em>: Download and install R</h3>
+<ul>
+<li>Download and install R from the CRAN website for Mac <a href="https://cran.r-project.org/bin/macosx/">here</a>.</li>
+<li>Select the <code>.pkg</code> file for the latest R version</li>
+<li>Double click on the downloaded file to install R</li>
+<li>It is also a good idea to install <a href="https://www.xquartz.org/">XQuartz</a> (needed by some packages)</li>
+</ul>
+</section>
+<section id="macos-download-and-install-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="macos-download-and-install-rstudio"><em>macOS</em>: Download and install RStudio</h3>
+<ul>
+<li>Go to the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio</a> download page</li>
+<li>Under Installers select <strong>RStudio x.yy.zzz - Mac OS X 10.6+ (64-bit)</strong> (where x, y, and z represent version numbers)</li>
+<li>Double click the file to install RStudio</li>
+</ul>
+</section>
+</section>
+<section id="check-install" class="level2">
+<h2 class="anchored" data-anchor-id="check-install">Check Install</h2>
+<section id="open-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="open-rstudio">Open RStudio</h3>
+<p>Once installed, RStudio should be accessible from the start menu. Start up RStudio. Once running it should look something like this:</p>
+<p><img src="figure/rstudio.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="rstudio-cloud" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio-cloud">RStudio Cloud</h2>
+<p>If you can’t install R or RStudio prior to beta testing, you can use use RStudio in the cloud. This is only a backup option and we strongly encourage you to troubleshoot the installation when able.</p>
+<p>To use RStudio Cloud, copy this link and paste it in a web browser: <a href="https://rstudio.cloud/project/4426781" class="uri">https://rstudio.cloud/project/4426781</a></p>
+<p>If you do not have an RStudio Cloud account, you will see this screen when you first visit the URL:</p>
+<p><img src="figure/cloudsignup.PNG" class="img-fluid"></p>
+<p><br><br></p>
+<p>You can <a href="https://login.rstudio.cloud/register?redirect=https%3A%2F%2Fclient.login.rstudio.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D1%26show_setup%3D1">setup an account</a> for free using a login you create or through a third-party (Google or GitHub).</p>
+<p>After your account is setup, you should a screen that looks something like this:</p>
+<p><img src="figure/tempproj.PNG" class="img-fluid"></p>
+<p><br><br></p>
+<p>You’ll see that this is a <b><span style="color:red">TEMPORARY COPY</span></b> under your account. Make it permanent by clicking the button on top. This will save any changes you make to this project under your account.</p>
+<p>This project includes an installation of MassWateR and a copy of the code used in the introduction on this site.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content created by Marcus Beck</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/massbays-tech/intro-to-r">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

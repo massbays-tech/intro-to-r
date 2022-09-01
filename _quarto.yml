@@ -9,6 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: setup.qmd
+        text: Setup
       - about.qmd
     background: "#00A4CF"
   page-footer: 
