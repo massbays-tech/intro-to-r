@@ -19,7 +19,7 @@ Let's get familiar with RStudio.
 
 ### Open R and RStudio
 
-If you haven't done so, download and install RStudio from the link above. After it's installed, find the RStudio shortcut and fire it up. You should see something like this:
+If you haven't done so, download and install R and RStudio from the [setup instructions](setup.html). After it's installed, find the RStudio shortcut and fire it up. You should see something like this:
 
 ![](figure/rstudio.png)
 
@@ -52,7 +52,7 @@ With the base install, you will gain access to many functions (`r pkgs <- search
 
 ```{r}
 # print
-print('hello world!')
+print("hello world!")
 # sequence
 seq(1, 10)
 # random numbers
@@ -93,11 +93,40 @@ One of the reasons for R's popularity is CRAN, [The Comprehensive R Archive Netw
 
 When a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you so no need to worry about that. In fact, on Windows most of this is pretty automatic.
 
-We use the `install.packages()` function to download and install a package. Here, we install the readxl package, then load it using the `library()` function.
+We use the `install.packages()` function to download and install a package. Here, we install the readxl package.
 
 ```{r}
-install.packages('readxl')
+#| eval: false
+install.packages("readxl")
+```
+
+You should see some text in the R console showing progress of the installation and a prompt after installation is done.  
+
+After installation, you can load a package using the `library()` function.  This makes all functions in a package available for you to use. 
+
+```{r}
 library(readxl)
+```
+
+Let's also install dplyr, as we'll need it later.
+
+```{r}
+#| eval: false
+install.packages("dplyr")
+```
+
+We also want to install MassWateR.  This package is not on CRAN, so we need to change a few options first.
+
+```{r}
+#| eval: false
+
+# Enable universe(s) by massbays-tech
+options(repos = c(
+  massbaystech = "https://massbays-tech.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"))
+
+# Install the package
+install.packages("MassWateR")
 ```
 
 An important aspect of packages is that you only need to download them once, but every time you start RStudio you need to load them with the `library()` function. Loading a package makes all of its functions available in your current R session.
@@ -129,7 +158,7 @@ length(log_var)
 A collection of vectors represented as one data object are often described as two-dimensional data, or in R speak, a data frame (i.e., `data.frame()`). Think of them like your standard spreadsheet, where each column describes a variable (vector) and rows link observations between columns. Here's a simple example:
 
 ```{r}
-ltrs <- c('a', 'b', 'c')
+ltrs <- c("a", "b", "c")
 nums <- c(1, 2, 3)
 logs <- c(T, F, T)
 mydf <- data.frame(ltrs, nums, logs)
@@ -151,7 +180,7 @@ It is the rare case when you manually enter your data in R, not to mention impra
 We can import the `ExampleSites.xlsx` dataset as follows. Note the use of a *relative* file path. You can see what R is using as your "working directory" using the `getwd()` function.
 
 ```{r}
-sitdat <- read_excel('data/ExampleSites.xlsx')
+sitdat <- read_excel("data/ExampleSites.xlsx")
 ```
 
 Let's explore the dataset a bit.
@@ -176,4 +205,4 @@ View(sitdat)
 
 ## Summary
 
-In this lesson we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. We've just imported some site data that can be used with the MassWateR package. Next we'll talk about MassWateR and proceed with the beta testing.
+In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. We've just imported some site data that can be used with the MassWateR package. Next we'll talk about MassWateR and proceed with the beta testing.

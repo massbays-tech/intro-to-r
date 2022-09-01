@@ -216,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Let’s get familiar with RStudio.</p>
 <section id="open-r-and-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="open-r-and-rstudio">Open R and RStudio</h3>
-<p>If you haven’t done so, download and install RStudio from the link above. After it’s installed, find the RStudio shortcut and fire it up. You should see something like this:</p>
+<p>If you haven’t done so, download and install R and RStudio from the <a href="setup.html">setup instructions</a>. After it’s installed, find the RStudio shortcut and fire it up. You should see something like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="figure/rstudio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="figure/rstudio.png" class="img-fluid figure-img"></a></p>
@@ -256,7 +256,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>With the base install, you will gain access to many functions (2336, to be exact). Some examples:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'hello world!'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"hello world!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "hello world!"</code></pre>
 </div>
@@ -268,31 +268,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random numbers</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1]  8.858860 10.445630  9.119766  9.513237 10.888739 12.439322  9.814821
-  [8] 12.299629 10.059332  9.536443 12.600915 11.314773  8.481072  8.730556
- [15] 10.945211 12.339686 11.672362  9.192239 10.601794  8.342835 12.612648
- [22]  8.945902 12.460151 10.895179 13.724489  6.236714  9.239879 15.497531
- [29] 10.191962 11.819819 11.810664  9.394094 13.502747  6.587820 11.914160
- [36]  9.993803  8.979530 11.524770  9.203116  8.815590  9.180082 13.272100
- [43] 11.251154 11.637692  9.772104 13.117259  7.592897 10.376620  8.906295
- [50] 10.833438  9.225270 11.281320  9.372781 10.028116  9.329473  9.262481
- [57]  9.301012  8.134134  7.940940  8.384760  7.082957  4.409975  9.445143
- [64] 13.225632 13.266692 13.653756 11.934872  8.263921 11.488471 12.364368
- [71] 11.367016  8.414107  6.791836 11.136564  7.479506  7.677899  8.565882
- [78]  9.525012  6.150180 11.923753  6.884096 10.357159 10.146840  9.601307
- [85] 12.047773 13.013092  7.232879 11.002065  9.460183 12.431270  9.385523
- [92]  8.406595 11.586429 12.577569  8.258652  9.882950 12.036784 13.185761
- [99] 10.913893 10.681567</code></pre>
+<pre><code>  [1]  9.782010 13.440272  6.195991  9.783003  9.120814 12.051064 13.057334
+  [8]  7.507421 12.573756  8.592159 11.479833  8.010938  8.504085  9.493125
+ [15] 12.574229  9.880044 10.150334  7.833789  8.339790 10.111492  9.514114
+ [22]  9.022272 13.251154 15.816214  9.990858  6.535609 13.144447 12.956155
+ [29]  9.821725  8.354982 10.509022  6.603856  8.236387 11.177475 13.983307
+ [36] 11.694147  5.665002 10.145536  8.905851  6.485283 10.390214  9.483861
+ [43]  9.458470  6.342929  9.075822  9.125529  7.090145  8.779215 11.592488
+ [50] 12.807230  9.642980 12.331922  8.587539  8.151203 12.081182 10.136487
+ [57] 11.126382 10.155304 14.353778  9.572162  8.125119 13.525484 11.259765
+ [64]  8.173439 10.634170 10.135731  5.967931  9.722450  9.418961 10.595435
+ [71] 10.854028  9.205592 13.218468  9.491170 11.438114  9.674045 11.088000
+ [78]  8.283159  6.989384 13.482318  9.662863 12.131151 10.675647  9.251454
+ [85]  9.429793  8.584183  7.432053 11.028278  8.478872 10.150434  8.111597
+ [92] 10.525864  7.810642 15.244389  7.820380  7.813313 10.954009  7.640308
+ [99] 10.489113 10.896007</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># average </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.05349596</code></pre>
+<pre><code>[1] -0.02707205</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sum</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.8217194</code></pre>
+<pre><code>[1] 8.784642</code></pre>
 </div>
 </div>
 <p>Very often you will see functions used like this:</p>
@@ -303,7 +303,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_random_sum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -1.629518</code></pre>
+<pre><code>[1] -1.216201</code></pre>
 </div>
 </div>
 <section id="what-is-the-environment" class="level3">
@@ -322,20 +322,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="installing-packages" class="level3">
 <h3 class="anchored" data-anchor-id="installing-packages">Installing packages</h3>
 <p>When a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you so no need to worry about that. In fact, on Windows most of this is pretty automatic.</p>
-<p>We use the <code>install.packages()</code> function to download and install a package. Here, we install the readxl package, then load it using the <code>library()</code> function.</p>
+<p>We use the <code>install.packages()</code> function to download and install a package. Here, we install the readxl package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'readxl'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Installing package into 'C:/Users/Marcus.SCCWRP2K/R/win-library/4.1'
-(as 'lib' is unspecified)</code></pre>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code>package 'readxl' successfully unpacked and MD5 sums checked
-
-The downloaded binary packages are in
-    C:\Users\Marcus.SCCWRP2K\AppData\Local\Temp\RtmpKGfCBB\downloaded_packages</code></pre>
+<p>You should see some text in the R console showing progress of the installation and a prompt after installation is done.</p>
+<p>After installation, you can load a package using the <code>library()</code> function. This makes all functions in a package available for you to use.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let’s also install dplyr, as we’ll need it later.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We also want to install MassWateR. This package is not on CRAN, so we need to change a few options first.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable universe(s) by massbays-tech</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">massbaystech =</span> <span class="st">"https://massbays-tech.r-universe.dev"</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the package</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"MassWateR"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>An important aspect of packages is that you only need to download them once, but every time you start RStudio you need to load them with the <code>library()</code> function. Loading a package makes all of its functions available in your current R session.</p>
 </section>
@@ -368,7 +376,7 @@ The downloaded binary packages are in
 <h3 class="anchored" data-anchor-id="data-frames-two-dimensional-data">Data frames (two-dimensional data)</h3>
 <p>A collection of vectors represented as one data object are often described as two-dimensional data, or in R speak, a data frame (i.e., <code>data.frame()</code>). Think of them like your standard spreadsheet, where each column describes a variable (vector) and rows link observations between columns. Here’s a simple example:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ltrs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>)</span>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ltrs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>logs <span class="ot">&lt;-</span> <span class="fu">c</span>(T, F, T)</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>mydf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(ltrs, nums, logs)</span>
@@ -393,7 +401,7 @@ The downloaded binary packages are in
 <p>It is the rare case when you manually enter your data in R, not to mention impractical for most datasets. Most data analysis workflows typically begin with importing a dataset from an external source. Literally, this means committing a dataset to memory (i.e., storing it as an object) as one of R’s data structure formats. We’ll be using <code>read_excel()</code> function from the readxl package.</p>
 <p>We can import the <code>ExampleSites.xlsx</code> dataset as follows. Note the use of a <em>relative</em> file path. You can see what R is using as your “working directory” using the <code>getwd()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sitdat <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">'data/ExampleSites.xlsx'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sitdat <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/ExampleSites.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s explore the dataset a bit.</p>
 <div class="cell">
@@ -442,7 +450,7 @@ The downloaded binary packages are in
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>In this lesson we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. We’ve just imported some site data that can be used with the MassWateR package. Next we’ll talk about MassWateR and proceed with the beta testing.</p>
+<p>In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. We’ve just imported some site data that can be used with the MassWateR package. Next we’ll talk about MassWateR and proceed with the beta testing.</p>
 
 
 </section>
@@ -561,7 +569,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 
