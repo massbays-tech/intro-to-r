@@ -12,6 +12,8 @@ website:
       - href: setup.qmd
         text: Setup
       - about.qmd
+      - href: resources.qmd
+        text: Resources
     background: "#00A4CF"
   page-footer: 
     left: "Content created by Marcus Beck" 

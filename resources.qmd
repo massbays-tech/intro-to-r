@@ -1,0 +1,11 @@
+---
+title: "Resources"
+---
+
+The following resources are available for use during the beta testing.  Please download and save copies to your computer. 
+
+* Surface water quality results: [link](data/BetaResults_9-2-22.xlsx)
+* Data quality objectives for accuracy: [link](data/BetaDQOAccuracy_9-2-22.xlsx)
+* Data quality objectives for frequency and completeness: [link](data/BetaDQOFreqComp_9-2-22.xlsx)
+* Site metadata: [link](data/BetaSites_9-2-22.xlsx)
+* Beta testing code: [link](data/MassWateR Beta Script 9-2-22.docx)
