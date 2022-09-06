@@ -280,31 +280,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random numbers</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1]  8.262292 10.329068 10.361771  6.985645  8.739968 11.169331  7.483430
-  [8]  8.124313 12.748752 16.598622  9.876476  9.641071 11.857961 11.793791
- [15] 12.541652 10.829731  8.692950 14.549483 11.992482  9.519888 13.139635
- [22]  7.209312  8.781213 10.201156  5.934747  6.907559 12.709996 13.273477
- [29]  9.451177  4.528372 11.298216 10.258943  9.445466 12.952579 12.203181
- [36] 12.795733  8.358922 11.016582  9.446647  9.145174  8.113248 12.718337
- [43] 12.566425  8.736887  8.389673 10.876029  9.786877 11.693782  8.067967
- [50] 12.693012 12.252684  8.854926  9.971868  7.366990 13.466300 10.102872
- [57] 12.056709 10.116134 13.595992  6.768810 12.220911  9.527526 11.459411
- [64]  9.013644  7.994607 11.163260  8.134302 12.604000 10.194868  7.024686
- [71]  8.941456 10.385676 10.150789  8.139652  6.607621  6.278544  8.190712
- [78]  6.563664  7.086098 10.454770 13.440431  9.755137  4.072174 11.223142
- [85]  8.312357 10.575958  8.455699 10.686806 13.397306  8.840222  8.566727
- [92] 11.464124  7.527675  6.563509 12.750110  9.888806  6.988700  6.196723
- [99] 11.010956  5.750464</code></pre>
+<pre><code>  [1] 12.618463  9.563948  7.956711 10.962593  9.297343 13.850822 12.164566
+  [8]  7.552828  8.712570 13.072970  8.231343 10.437647  8.410622  7.618000
+ [15] 13.599146  8.354594  6.366423  9.684813  7.880464  9.612883  9.797999
+ [22]  9.920121 10.412360  8.650904 10.454544 12.988087  9.191694 12.785478
+ [29]  5.532986  8.829566 11.065769  9.686534 10.106953 12.219181 10.771391
+ [36]  9.697348  9.967493 14.750464  7.242108 11.695768  9.312704 11.520649
+ [43]  9.031592  9.983726  8.898694  8.889024  9.071379 11.696583 12.855583
+ [50]  7.315685 11.967362 12.417936  8.345890  9.281195 12.580326  7.190846
+ [57]  9.422886  8.991868  5.249523  8.780795 10.364442  8.255392  8.670462
+ [64]  8.808367 10.156334  8.062524  9.711001  9.586700  7.010539 10.750696
+ [71]  8.680365  7.540892  6.654879 11.969902  8.336455  6.004503 11.530957
+ [78]  6.152460  6.762903 11.809234  9.634536 12.365541 11.030878  7.431317
+ [85] 10.938372 10.590134 10.256221 12.250508  8.818497 11.929945 10.997006
+ [92] 10.730904 12.745573  9.160283  8.188840  6.624493  9.898741  7.147298
+ [99]  8.904979  8.562194</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># average </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.03788444</code></pre>
+<pre><code>[1] 0.04203739</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sum</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -2.746797</code></pre>
+<pre><code>[1] -11.73571</code></pre>
 </div>
 </div>
 <p>Very often you will see functions used like this:</p>
@@ -315,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_random_sum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.6812079</code></pre>
+<pre><code>[1] -21.74535</code></pre>
 </div>
 </div>
 <section id="what-is-the-environment" class="level3">
@@ -329,7 +329,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The base installation of R is quite powerful, but you will soon have a need or desire to go beyond this. Packages provide this ability. They are a standardized way of extending R with new methods, techniques, and programming functionality. There is a lot to say about packages regarding finding them, using them, etc., but for now let’s focus just on the basics.</p>
 <section id="cran" class="level3">
 <h3 class="anchored" data-anchor-id="cran">CRAN</h3>
-<p>One of the reasons for R’s popularity is CRAN, <a href="http://cran.r-project.org/" target="_blank">The Comprehensive R Archive Network</a>. This is where you download R and also where most will gain access to packages (there are other places, but that is for later). Not much else to say about this now other than to be aware of it. As of 2022-09-05, there are 18566 packages on CRAN!</p>
+<p>One of the reasons for R’s popularity is CRAN, <a href="http://cran.r-project.org/" target="_blank">The Comprehensive R Archive Network</a>. This is where you download R and also where most will gain access to packages (there are other places, but that is for later). Not much else to say about this now other than to be aware of it. As of 2022-09-06, there are 18566 packages on CRAN!</p>
 </section>
 <section id="installing-packages" class="level3">
 <h3 class="anchored" data-anchor-id="installing-packages">Installing packages</h3>
@@ -582,7 +582,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":true,"closeEffect":"zoom","selector":".lightbox"});</script>
 
 
 
