@@ -2,11 +2,13 @@
 title: "Resources"
 ---
 
-The following resources are available for use during the beta testing.  Please download and save copies to your computer. 
+The following resources are available for use during the beta testing. Please download and save copies to your computer.
 
-* Surface water quality results: [link](data/BetaResults_9-2-22.xlsx)
-* Data quality objectives for accuracy: [link](data/BetaDQOAccuracy_9-2-22.xlsx)
-* Data quality objectives for frequency and completeness: [link](data/BetaDQOFreqComp_9-2-22.xlsx)
-* Site metadata: [link](data/BetaSites_9-2-22.xlsx)
-* Beta testing code (Word file): [link](data/MassWateR Beta Script 9-2-22.docx)
-* Beta testing code (R file): [link](data/MassWateR Beta script 9-2-22.R)
+-   Surface water quality results: [link](data/BetaResults_9-2-22.xlsx)
+-   Data quality objectives for accuracy: [link](data/BetaDQOAccuracy_9-2-22.xlsx)
+-   Data quality objectives for frequency and completeness: [link](data/BetaDQOFreqComp_9-2-22.xlsx)
+-   Site metadata: [link](data/BetaSites_9-2-22.xlsx)
+-   Beta testing code (Word file): [link](data/MassWateR%20Beta%20Script%209-2-22.docx)
+-   Beta testing code (R file): [link](data/MassWateR%20Beta%20script%209-2-22.R)
+-   Intro to R code (R file): [link](data/intro-t-r.R)
+-   Intro to R example file: [link](data/ExampleSites.xlsx)
