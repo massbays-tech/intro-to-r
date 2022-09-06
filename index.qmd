@@ -13,26 +13,26 @@ options(repos = "http://cran.rstudio.com/")
 
 ## RStudio
 
-[RStudio](https://www.rstudio.com/){target="_blank"} is the go-to Interactive Development Environment (IDE) for R. Think of it like a car that is built around an engine. R is the engine and RStudio is the car. Rstudio includes many features to improve the user's experience.
+[RStudio](https://www.rstudio.com/){target="_blank"} is the go-to Interactive Development Environment (IDE) for R. Rstudio includes many features to improve the user's experience.
 
 Let's get familiar with RStudio.
 
 ### Open R and RStudio
 
-If you haven't done so, download and install R and RStudio from the [setup instructions](setup.html). After it's installed, find the RStudio shortcut and fire it up. You should see something like this:
+Find the RStudio shortcut on your computer and fire it up. You should see something like this:
 
 ![](figure/rstudio.png)
 
 There are four panes in RStudio:
 
 -   **Source**: Your primary window for writing code to send to the console, this is where you write and save R "scripts"
--   **Console**: This is where code is executed in R - you should almost never write code here.
+-   **Console**: This is where code is executed in R
 -   **Environment, History, etc.**: A tabbed window showing your working environment, code execution history, and other useful things
 -   **Files, plots, etc.**: A tabbed window showing a file explorer, a plot window, list of installed packages, help files, and viewer
 
 ### Scripting
 
-In most cases, you will not enter and execute code directly in the console. Code can be written in a script and then sent directly to the console when you're ready to run it. The key difference here is that a script can be saved and shared.
+In most cases, you will not enter and execute code directly in the console. Code can be written in a script and then sent directly to the console.
 
 Open a new script from the File menu...
 
@@ -40,13 +40,13 @@ Open a new script from the File menu...
 
 ### Executing code in RStudio
 
-After you write code in your script, it can be sent to the Console to run the code in R. Anything you write in the script will not be run or saved in R until it is sent to the console. There are two ways to do this. First, you can hit the `Run` button at the top right of the scripting window. Second, you can use `ctrl+enter` (`cmd+enter` on a Mac). Both approaches will send the selected line to the console, then move to the next line in your script. You can also highlight and send an entire block of code.
+After you write code in an R script, it can be sent to the Console to run the code. There are two ways to do this. First, you can hit the `Run` button at the top right of the scripting window. Second, you can use `ctrl+enter` (`cmd+enter` on a Mac).
 
 ![](figure/rstudio_run.jpg)
 
 ## R language fundamentals
 
-R is built around functions. These are commands that do specific things based on what you provide. The basic syntax of a function follows the form: `function_name(arg1, arg2, ...)`.
+R is built around functions. The basic syntax of a function follows the form: `function_name(arg1, arg2, ...)`.
 
 With the base install, you will gain access to many functions (`r pkgs <- search(); pkgs <- pkgs[grep("package:",pkgs)]; length(unlist(sapply(pkgs,lsf.str)))`, to be exact). Some examples:
 
@@ -69,7 +69,7 @@ Very often you will see functions used like this:
 my_random_sum <- sum(rnorm(100))
 ```
 
-In this case the first part of the line is the name of an object. You make this up. Ideally it should have some meaning, but the only rules are that it can't start with a number and must not have any spaces. The second bit, `<-`, is the assignment operator. This tells R to take the result of `sum(rnorm(100))` and store it in an object named, `my_random_sum`. It is stored in the environment and can be used by just executing it's name in the console.
+The first part of the line is the name of an object that you make up. The second bit, `<-`, is the assignment operator. This tells R to take the result of `sum(rnorm(100))` and store it in an object named, `my_random_sum`. It is stored in the environment and can be used by just executing it's name in the console.
 
 ```{r}
 my_random_sum
@@ -77,21 +77,19 @@ my_random_sum
 
 ### What is the environment?
 
-There are two outcomes when you run code. First, the code will simply print output directly in the console. Second, there is no output because you have stored it as a variable using `<-`. Output that is stored is actually saved in the `environment`. The environment is the collection of named objects that are stored in memory for your current R session. Anything stored in memory will be accessible by it's name without running the original script that was used to create it.
-
-With this, you have the very basics of how we write R code and save objects that can be used later.
+There are two outcomes when you run code. First, the code will simply print output directly in the console. Second, there is no output because you have stored it as a variable using `<-`. Output that is stored is saved in the `environment`. The environment is the collection of named objects that are stored in memory for your current R session.
 
 ## Packages
 
-The base installation of R is quite powerful, but you will soon have a need or desire to go beyond this. Packages provide this ability. They are a standardized way of extending R with new methods, techniques, and programming functionality. There is a lot to say about packages regarding finding them, using them, etc., but for now let's focus just on the basics.
+The base installation of R is quite powerful.  Packages allow you to include new methods for use in R.
 
 ### CRAN
 
-One of the reasons for R's popularity is CRAN, [The Comprehensive R Archive Network](http://cran.r-project.org/){target="_blank"}. This is where you download R and also where most will gain access to packages (there are other places, but that is for later). Not much else to say about this now other than to be aware of it. As of `r format(Sys.time(), "%Y-%m-%d")`, there are `r nrow(available.packages())` packages on CRAN!
+Many packages are available on CRAN, [The Comprehensive R Archive Network](http://cran.r-project.org/){target="_blank"}. This is where you download R and also where most will gain access to packages. As of `r format(Sys.time(), "%Y-%m-%d")`, there are `r nrow(available.packages())` packages on CRAN!
 
 ### Installing packages
 
-When a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you so no need to worry about that. In fact, on Windows most of this is pretty automatic.
+When a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you.
 
 We use the `install.packages()` function to download and install a package. Here, we install the readxl package.
 
@@ -129,15 +127,15 @@ options(repos = c(
 install.packages("MassWateR")
 ```
 
-An important aspect of packages is that you only need to download them once, but every time you start RStudio you need to load them with the `library()` function. Loading a package makes all of its functions available in your current R session.
+An important aspect of packages is that you only need to download them once, but every time you start RStudio you need to load them with the `library()` function.
 
 ## Data structures in R
 
-Now that you know how to get started in R and how to download packages, we can begin talking about R data structures. Simply put, a data structure is a way for programming languages to handle information storage.
+Now we can talk about R data structures. Simply put, a data structure is a way for programming languages to handle information storage.
 
 ### Vectors (one-dimensional data)
 
-The basic data format in R is a vector - a one-dimensional grouping of elements that have the same type. These are all vectors and they are created with the `c` function:
+The basic data format in R is a vector - a one-dimensional grouping of elements that have the same type. These are all vectors and they are created with the `c` (concatenate) function:
 
 ```{r}
 dbl_var <- c(1, 2.5, 4.5)
@@ -155,7 +153,7 @@ length(log_var)
 
 ### Data frames (two-dimensional data)
 
-A collection of vectors represented as one data object are often described as two-dimensional data, or in R speak, a data frame (i.e., `data.frame()`). Think of them like your standard spreadsheet, where each column describes a variable (vector) and rows link observations between columns. Here's a simple example:
+A collection of vectors represented as one data object are often described as two-dimensional data, or in R speak, a data frame. Here's a simple example:
 
 ```{r}
 ltrs <- c("a", "b", "c")
@@ -171,11 +169,9 @@ The only constraints required to make a data frame are:
 
 2.  The number of observations in each column is equal.
 
-You might also see data frames described as "tibbles". This is a modern re-envisioning of the data frame. For all practical purposes, you can treat them the same.
-
 ## Getting your data into R
 
-It is the rare case when you manually enter your data in R, not to mention impractical for most datasets. Most data analysis workflows typically begin with importing a dataset from an external source. Literally, this means committing a dataset to memory (i.e., storing it as an object) as one of R's data structure formats. We'll be using `read_excel()` function from the readxl package.
+It is the rare case when you manually enter your data in R. Most data analysis workflows typically begin with importing a dataset from an external source. We'll be using `read_excel()` function from the readxl package.
 
 We can import the `ExampleSites.xlsx` dataset as follows. Note the use of a *relative* file path. You can see what R is using as your "working directory" using the `getwd()` function.
 
@@ -205,4 +201,4 @@ View(sitdat)
 
 ## Summary
 
-In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. We've just imported some site data that can be used with the MassWateR package. Next we'll talk about MassWateR and proceed with the beta testing.
+In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. Next we'll talk about MassWateR and proceed with the beta testing.
