@@ -4,6 +4,7 @@ title: "Resources"
 
 The following resources are available for use during the beta testing. Please download and save copies to your computer.
 
+-   Meeting Agenda: [link](data/Agenda_Beta_Testing.pdf)
 -   Surface water quality results: [link](data/BetaResults_9-2-22.xlsx)
 -   Data quality objectives for accuracy: [link](data/BetaDQOAccuracy_9-2-22.xlsx)
 -   Data quality objectives for frequency and completeness: [link](data/BetaDQOFreqComp_9-2-22.xlsx)
