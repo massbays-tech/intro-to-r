@@ -9,6 +9,8 @@ The following resources are available for use during the beta testing. Please do
 -   Data quality objectives for accuracy: [link](data/BetaDQOAccuracy_9-2-22.xlsx)
 -   Data quality objectives for frequency and completeness: [link](data/BetaDQOFreqComp_9-2-22.xlsx)
 -   Site metadata: [link](data/BetaSites_9-2-22.xlsx)
+-   Parameter mapping: [link](data/Parameter Mapping_5-18-22.xlsx)
+-   Parameter thresholds: [link](data/Parameter Thresholds_8-17-22.xlsx)
 -   Beta testing code (Word file): [link](data/MassWateR%20Beta%20Script%209-2-22.docx)
 -   Beta testing code (R file): [link](data/MassWateR%20Beta%20script%209-2-22.R)
 -   Intro to R code (R file): [link](data/intro-to-r.R)
