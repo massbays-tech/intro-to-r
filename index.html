@@ -280,31 +280,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random numbers</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1]  7.868791  9.800359 15.189735 12.000310  8.446381 10.333665  9.565752
-  [8] 11.342593 12.750166  9.583720  8.869417  7.606417  9.091098 10.209176
- [15]  9.250361  9.811311  6.189647 13.642992 11.005508 13.825945  4.621092
- [22] 12.140068 11.254936 10.578602  9.818169 11.430674  8.120402  7.298230
- [29]  8.046866  6.128876 10.737403 11.897743 13.285109  9.539360  8.135137
- [36]  8.566171 10.175880 10.506643  8.512417  7.869440 10.583776 10.578017
- [43] 11.734034 12.143681  9.012599 10.175857 10.521982 11.230447  8.612783
- [50]  7.898921  9.919985 10.934260  8.699807  6.727256 10.604009  8.536739
- [57] 11.582149 11.144091 13.763600  7.032618 10.299635  8.842222  9.206877
- [64] 11.627237  9.472476  9.367004  9.291361 11.061990 10.520419 10.074413
- [71]  7.736395  7.101168  9.027623 10.919883 11.010051  9.250633  8.922716
- [78]  8.096053  6.475203  9.807979 11.246880  9.455170  6.002968 13.241682
- [85] 10.883177 10.193110  8.094727  9.034873 13.738332 11.476797  7.786611
- [92] 11.441713 13.125659 10.741084 12.714268 12.244243 10.635018  8.479603
- [99] 11.597450 12.664458</code></pre>
+<pre><code>  [1]  8.586130 11.051130 10.358314 10.519115 11.347488 11.180502 11.088611
+  [8] 11.990915  9.987578 12.408681 11.023715 10.986844 13.025303 10.722274
+ [15]  9.951256 12.024543  9.355144 10.699034 10.217001 10.153702  6.957398
+ [22] 11.206882 10.524043 12.099889 10.308291  7.959541 10.161459 13.603122
+ [29] 10.250225 17.023456  8.436629  9.638207 12.964647 14.234269 10.862232
+ [36]  7.619877  6.938655 10.065297 10.080146 11.224535 10.817506 10.260279
+ [43] 12.104402 11.212134  8.827373 12.244567  9.234257 10.183056 11.511655
+ [50] 11.383913  9.529449  8.082284 10.837952  8.570835 11.572738 10.309401
+ [57]  7.908273  8.470493 11.043003  5.604929 10.336757 10.682583 10.964535
+ [64]  9.575031 10.890564 12.700427  9.666176  9.608427  8.069752 11.864596
+ [71] 11.217521  9.297425 12.778012  7.317012 12.631441 12.554638  8.441098
+ [78]  9.593435  7.218337 11.388756 10.313516 11.854778  9.132004 10.262294
+ [85]  8.448275  8.354082 11.595709  8.720283 12.304773 12.710923 10.929132
+ [92]  7.555284  9.640651  9.344898  9.117961  9.399257 12.086228  9.001545
+ [99] 11.096968  8.447893</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># average </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.2508656</code></pre>
+<pre><code>[1] 0.0175221</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sum</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 12.04154</code></pre>
+<pre><code>[1] 1.489848</code></pre>
 </div>
 </div>
 <p>Very often you will see functions used like this:</p>
@@ -315,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_random_sum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.672824</code></pre>
+<pre><code>[1] 7.312583</code></pre>
 </div>
 </div>
 <section id="what-is-the-environment" class="level3">
@@ -580,7 +580,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":true});</script>
 
 
 
