@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.1.242">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to R - Introduction to R: MassWateR beta testing</title>
+<title>Introduction to R: MassWateR beta testing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -140,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <img src="./figure/logo.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Introduction to R</span>
+    <span class="navbar-title">Introduction to R: MassWateR beta testing</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -280,31 +280,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random numbers</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] 11.037192 10.877269  9.103557 10.130264  8.822843 11.587559  9.375510
-  [8]  7.981890  5.619251  7.657568  8.912973  8.584530  7.232065 10.775802
- [15]  8.850104 11.379383 10.741568 10.723938  5.884085  7.155638 11.578101
- [22] 11.828035 11.215593 10.564719  4.924650  7.423230 11.488530  7.544459
- [29]  9.762224  9.993761  9.045896  7.728361  9.080587 10.989508 12.918012
- [36] 11.717437  8.034506 11.072660 12.103871 11.058543 11.600523 12.272286
- [43] 10.505314 12.090633  9.270349  8.659450  8.373520 10.664762  9.780180
- [50]  7.483534 13.481186  8.972937  7.835086 12.098213 10.852309 11.161704
- [57]  8.068237 10.969739  9.588650 10.370160  6.799596  9.799018  9.036762
- [64]  6.492999 10.384103  8.185195  8.218222  6.901304 15.993437  8.973324
- [71] 10.372612 10.562995  7.525472  9.091824 12.613842 11.358617 10.286944
- [78] 14.091213 13.177468 10.634247  5.192025 10.228890  9.590530 12.954616
- [85]  7.214988  9.439395  6.958259 14.007462  8.667454 10.136150 12.313335
- [92]  8.242003  9.062280 11.859400 11.555566 10.613238  9.527825  4.412225
- [99]  9.583924  8.820689</code></pre>
+<pre><code>  [1]  7.982895 11.743313  7.987564  6.220306 11.006786  9.531114  8.820849
+  [8] 11.022064 10.353925  5.929948  9.526294  6.897886 10.343758  9.108105
+ [15] 11.193757 11.106924  9.128938  9.824278 11.221165  9.221356 10.814451
+ [22] 11.532559  9.815410 10.607269  8.153597 11.506355  9.913618  6.961055
+ [29] 12.525569 10.920725  7.418483 11.583474  8.219518  9.284361 11.853766
+ [36] 12.328428  8.663583 10.953101 10.930277  7.204706 12.759149 10.803891
+ [43] 11.230774 12.204591  7.898091  6.993209  8.800345 10.816666  9.263179
+ [50] 11.018384 10.277331  8.537129  8.245156  9.820345 10.670448 10.737875
+ [57] 10.231201 11.507520 11.304515 10.893377 11.892417 12.213380  9.772801
+ [64]  9.110519  9.796113  8.356907  9.387166 15.163761 10.338448  9.455485
+ [71] 11.444280 11.183119  9.796692 10.740096 10.729150  8.233905  6.179247
+ [78] 13.166146  8.896922 10.244846  5.675293 11.809761  9.018693  9.557562
+ [85]  8.787337  7.001374  7.116281 10.588574 12.254565 10.284241  7.144841
+ [92] 10.823437 10.745848 10.435005 11.830585 12.747898 10.701020 10.696821
+ [99] 10.357454 11.117572</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># average </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.04732381</code></pre>
+<pre><code>[1] 0.02527311</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sum</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 10.02833</code></pre>
+<pre><code>[1] 1.86156</code></pre>
 </div>
 </div>
 <p>Very often you will see functions used like this:</p>
@@ -315,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_random_sum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -1.231191</code></pre>
+<pre><code>[1] -2.941339</code></pre>
 </div>
 </div>
 <section id="what-is-the-environment" class="level3">
@@ -328,7 +328,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The base installation of R is quite powerful. Packages allow you to include new methods for use in R.</p>
 <section id="cran" class="level3">
 <h3 class="anchored" data-anchor-id="cran">CRAN</h3>
-<p>Many packages are available on CRAN, <a href="http://cran.r-project.org/" target="_blank">The Comprehensive R Archive Network</a>. This is where you download R and also where most will gain access to packages. As of 2022-09-14, there are 18634 packages on CRAN!</p>
+<p>Many packages are available on CRAN, <a href="http://cran.r-project.org/" target="_blank">The Comprehensive R Archive Network</a>. This is where you download R and also where most will gain access to packages. As of 2022-09-15, there are 18640 packages on CRAN!</p>
 </section>
 <section id="installing-packages" class="level3">
 <h3 class="anchored" data-anchor-id="installing-packages">Installing packages</h3>
@@ -460,7 +460,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. Next we’ll talk about MassWateR and proceed with the beta testing.</p>
+<p>In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. Next we’ll <a href="https://massbays-tech.github.io/intro-to-masswater/">introduce MassWateR</a> and proceed with the beta testing.</p>
 
 
 </section>
@@ -580,7 +580,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
 
 
 
