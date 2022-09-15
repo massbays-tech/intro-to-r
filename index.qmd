@@ -201,4 +201,4 @@ View(sitdat)
 
 ## Summary
 
-In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. Next we'll talk about MassWateR and proceed with the beta testing.
+In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. Next we'll [introduce MassWateR](https://massbays-tech.github.io/intro-to-masswater/) and proceed with the beta testing.
