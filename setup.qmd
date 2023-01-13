@@ -12,7 +12,7 @@ Thanks to the [USGS-R Training group](https://owi.usgs.gov/R/training.html) and 
 
 ### *Windows*: Download and install R
 
-Go to [CRAN and download](https://cran.rstudio.com/bin/windows/base/) the R installer for Windows. Make sure to choose the latest stable version (v4.2.1 as of September 2022).
+Go to [CRAN and download](https://cran.rstudio.com/bin/windows/base/) the R installer for Windows. Make sure to choose the latest stable version (v4.2.2 as of January 2023).
 
 Once the installer downloads, Right-click on it and select "Run as administrator".
 
