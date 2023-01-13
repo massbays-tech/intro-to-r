@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-This website provides a short introduction to R for the beta-testing workshop for the [MassWateR](https://massbays-tech.github.io/MassWateR) R package.
+This website provides a short introduction to R for workshops on the [MassWateR](https://massbays-tech.github.io/MassWateR) R package.
 
 ![](figure/logo.png){fig-align="left" width="100px"}
 

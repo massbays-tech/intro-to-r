@@ -2,16 +2,12 @@
 title: "Resources"
 ---
 
-The following resources are available for use during the beta testing. Please download and save copies to your computer.
+The following resources are available to support this website. Please download and save copies to your computer as needed.
 
--   Meeting Agenda: [link](data/Agenda_Beta_Testing.pdf)
--   **Surface water quality results**: [link](data/BetaResults_9-8-22.xlsx)
--   **Data quality objectives for accuracy**: [link](data/BetaDQOAccuracy_9-2-22.xlsx)
--   **Data quality objectives for frequency and completeness**: [link](data/BetaDQOFreqComp_9-2-22.xlsx)
--   **Site metadata**: [link](data/BetaSites_9-2-22.xlsx)
--   Parameter mapping: [link](data/Parameter Mapping_5-18-22.xlsx)
--   Parameter thresholds: [link](data/Parameter Thresholds_8-17-22.xlsx)
--   Beta testing code (Word file): [link](data/MassWateR%20Beta%20Script%209-14-22.docx)
--   Beta testing code (R file): [link](data/MassWateR%20Beta%20script%209-14-22.R)
--   Intro to R code (R file): [link](data/intro-to-r.R)
--   Intro to R example file: [link](data/ExampleSites.xlsx)
+-   **Surface water quality results**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleResults.xlsx)
+-   **Data quality objectives for accuracy**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleDQOAccuracy.xlsx)
+-   **Data quality objectives for frequency and completeness**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleDQOFrequencyCompleteness.xlsx)
+-   **Site metadata**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleSites.xlsx)
+-   **WQX metadata**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleWQX.xlsx)
+-   Parameter mapping: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ParameterMapping.xlsx)
+-   Parameter thresholds: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ThresholdMapping.xlsx)

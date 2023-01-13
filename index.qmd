@@ -1,5 +1,5 @@
 ---
-title: "Introduction to R: MassWateR beta testing"
+title: "Introduction to R for MassWateR"
 
 filters:
    - lightbox
@@ -81,7 +81,7 @@ There are two outcomes when you run code. First, the code will simply print outp
 
 ## Packages
 
-The base installation of R is quite powerful.  Packages allow you to include new methods for use in R.
+The base installation of R is quite powerful. Packages allow you to include new methods for use in R.
 
 ### CRAN
 
@@ -91,38 +91,25 @@ Many packages are available on CRAN, [The Comprehensive R Archive Network](http:
 
 When a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you.
 
-We use the `install.packages()` function to download and install a package. Here, we install the readxl package.
+We use the `install.packages()` function to download and install a package. Here, we install the readxl package, used below.
 
 ```{r}
 #| eval: false
 install.packages("readxl")
 ```
 
-You should see some text in the R console showing progress of the installation and a prompt after installation is done.  
+You should see some text in the R console showing progress of the installation and a prompt after installation is done.
 
-After installation, you can load a package using the `library()` function.  This makes all functions in a package available for you to use. 
+After installation, you can load a package using the `library()` function. This makes all functions in a package available for you to use.
 
 ```{r}
 library(readxl)
 ```
 
-Let's also install dplyr, as we'll need it later.
+We also want to install MassWateR from CRAN.
 
 ```{r}
 #| eval: false
-install.packages("dplyr")
-```
-
-We also want to install MassWateR.  This package is not on CRAN, so we need to change a few options first.
-
-```{r}
-#| eval: false
-
-# Enable universe(s) by massbays-tech
-options(repos = c(
-  massbaystech = "https://massbays-tech.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"))
-
 # Install the package
 install.packages("MassWateR")
 ```
@@ -201,4 +188,4 @@ View(sitdat)
 
 ## Summary
 
-In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files. Next we'll [introduce MassWateR](https://massbays-tech.github.io/intro-to-masswater/) and proceed with the beta testing.
+In this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files.

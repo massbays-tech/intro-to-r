@@ -2,7 +2,7 @@
 title: "Setup R and RStudio"
 ---
 
-Thanks for your interest in the [MassWateR](https://massbays-tech.github.io/MassWateR) R package. For the package beta testing, we will be using [RStudio](https://www.rstudio.com/) as our interface to R. In order to participate in this testing, you will need to make sure you have R and RStudio installed on your computer.
+Thanks for your interest in the [MassWateR](https://massbays-tech.github.io/MassWateR) R package. For the package workshops, we will be using [RStudio](https://www.rstudio.com/) as our interface to R. In order to participate in this testing, you will need to make sure you have R and RStudio installed on your computer.
 
 Thanks to the [USGS-R Training group](https://owi.usgs.gov/R/training.html) and [Data Carpentry](https://datacarpentry.org/R-ecology-lesson/index.html) for making their installation materials available. The following instructions come directly from their materials, with a few minor edits to help you get set up.
 
@@ -63,19 +63,36 @@ Once installed, RStudio should be accessible from the start menu. Start up RStud
 
 ![](figure/rstudio.png)
 
-## RStudio Cloud
+## Install MassWateR (optional)
 
-If you can't install R or RStudio prior to beta testing, you can use use RStudio in the cloud. This is only a backup option and we strongly encourage you to troubleshoot the installation when able.
+The MassWateR package can be installed from [CRAN](https://cran.r-project.org/) by running the code below in the RStudio console. The installation will also be covered during the workshop.
 
-To use RStudio Cloud, copy this link and paste it in a web browser: <https://rstudio.cloud/project/4426781> 
+```{r}
+#| eval: false
+# Install the package
+install.packages('MassWateR')
+```
 
-If you do not have an RStudio Cloud account, you will see this screen when you first visit the URL: 
+The installation will take a minute or so to download.  You will see text and several messages in the console during the download.  Once it's finished, verify the installation worked by loading the package from your library. 
+
+```{r}
+#| eval: false
+library(MassWateR)
+```
+
+## RStudio Cloud (optional)
+
+If you can't install R or RStudio prior to the workshop, you can use use RStudio in the cloud. This is only a backup option and we strongly encourage you to troubleshoot the installation when able.
+
+To use RStudio Cloud, copy this link and paste it in a web browser: <https://rstudio.cloud/project/4426781>
+
+If you do not have an RStudio Cloud account, you will see this screen when you first visit the URL:
 
 ![](figure/cloudsignup.PNG)
 
 <br></br>
 
-You can [setup an account](https://login.rstudio.cloud/register?redirect=https%3A%2F%2Fclient.login.rstudio.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D1%26show_setup%3D1) for free using a login you create or through a third-party (Google or GitHub).  
+You can [setup an account](https://login.rstudio.cloud/register?redirect=https%3A%2F%2Fclient.login.rstudio.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D1%26show_setup%3D1) for free using a login you create or through a third-party (Google or GitHub).
 
 After your account is setup, you should a screen that looks something like this:
 
@@ -83,6 +100,6 @@ After your account is setup, you should a screen that looks something like this:
 
 <br></br>
 
-You'll see that this is a <b><span style="color:red">TEMPORARY COPY</span></b> under your account.  Make it permanent by clicking the button on top.  This will save any changes you make to this project under your account. 
+You'll see that this is a <b>[TEMPORARY COPY]{style="color:red"}</b> under your account. Make it permanent by clicking the button on top. This will save any changes you make to this project under your account.
 
 This project includes an installation of MassWateR and a copy of the code used in the introduction on this site.
