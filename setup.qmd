@@ -80,13 +80,13 @@ The installation will take a minute or so to download.  You will see text and se
 library(MassWateR)
 ```
 
-## RStudio Cloud (optional)
+## Posit Cloud (optional)
 
-If you can't install R or RStudio prior to the workshop, you can use use RStudio in the cloud. This is only a backup option and we strongly encourage you to troubleshoot the installation when able.
+If you can't install R or RStudio prior to the workshop, you can use use RStudio in the cloud on the Posit website. This is only a backup option and we strongly encourage you to troubleshoot the installation when able.
 
-To use RStudio Cloud, copy this link and paste it in a web browser: <https://rstudio.cloud/project/4426781>
+To use RStudio in the cloud, copy this link and paste it in a web browser: <https://posit.cloud/project/4426781>
 
-If you do not have an RStudio Cloud account, you will see this screen when you first visit the URL:
+If you do not have a Posit Cloud account, you will see this screen when you first visit the URL:
 
 ![](figure/cloudsignup.PNG)
 
@@ -102,4 +102,4 @@ After your account is setup, you should a screen that looks something like this:
 
 You'll see that this is a <b>[TEMPORARY COPY]{style="color:red"}</b> under your account. Make it permanent by clicking the button on top. This will save any changes you make to this project under your account.
 
-This project includes an installation of MassWateR and a copy of the code used in the introduction on this site.
+This project includes an installation of MassWateR that you can use for the workshop.
