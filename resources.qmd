@@ -11,6 +11,7 @@ The following resources are available for training and testing. Please download 
 -   **Sample Data quality objectives for frequency and completeness**: [link](https://github.com/massbays-tech/intro-to-r/data/Training_DQOFreqComp.xlsx)
 -   **Sample Site metadata**: [link](https://github.com/massbays-tech/intro-to-r/data/Training_Sites.xlsx)
 -   **Sample WQX metadata**: [link](https://github.com/massbays-tech/intro-to-r/data/Training_WQXMeta.xlsx)
+-   WQX Upload template: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/WQX_Phys-Chem_Template_for_MassWateR.xlsx)
 -   Parameter mapping: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ParameterMapping.xlsx)
 -   Parameter thresholds: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ThresholdMapping.xlsx)
 -   Intro to MassWateR slide deck: [link](https://massbays-tech.github.io/intro-to-r){target="_blank"} (visit the [official website](https://massbays-tech.github.io/MassWateR) for detailed info)
