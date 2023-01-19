@@ -40,7 +40,7 @@ Open a new script from the File menu...
 
 ### Executing code in RStudio
 
-After you write code in an R script, it can be sent to the Console to run the code. There are two ways to do this. First, you can hit the `Run` button at the top right of the scripting window. Second, you can use `ctrl+enter` (`cmd+enter` on a Mac).
+After you write code in an R script, it can be sent to the Console to run the code. There are two ways to do this. First, you can hit the `Run` button at the top right of the scripting window. Second, you can use `ctrl+enter` (`cmd+enter` on a Mac). Either option will run the line(s) of script that are selected.
 
 ![](figure/rstudio_run.jpg)
 
@@ -91,7 +91,7 @@ Many packages are available on CRAN, [The Comprehensive R Archive Network](http:
 
 When a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you.
 
-We use the `install.packages()` function to download and install a package. Here, we install the readxl package, used below.
+We use the `install.packages()` function to download and install a package. Here, we install the readxl package, used below, which is used to upload data from and Excel file.
 
 ```{r}
 #| eval: false
@@ -131,7 +131,7 @@ log_var <- c(TRUE, FALSE, T, F)
 chr_var <- c("a", "b", "c")
 ```
 
-The four types of vectors are `double` (or numeric), `integer`, `logical`, and `character`. Each type has some useful properties:
+The four types of vectors are `double` (or numeric), `integer`, `logical`, and `character`. The following functions can return useful information about the vectors:
 
 ```{r}
 class(dbl_var)
@@ -140,7 +140,7 @@ length(log_var)
 
 ### Data frames (two-dimensional data)
 
-A collection of vectors represented as one data object are often described as two-dimensional data, or in R speak, a data frame. Here's a simple example:
+A collection of vectors represented as one data object are often described as two-dimensional data, like a spreadsheet, or in R speak, a data frame. Here's a simple example:
 
 ```{r}
 ltrs <- c("a", "b", "c")
