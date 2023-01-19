@@ -4,13 +4,13 @@ title: "Resources"
 
 The following resources are available for training and testing. Please download and save copies to your computer as needed.
 
--   Training Script R file: [link](https://github.com/massbays-tech/intro-to-r/data/MassWateR_Training_script.R)
--   Training Script txt file: [link](https://github.com/massbays-tech/intro-to-r/data/MassWateR_Training_script.txt)
--   **Sample Surface water quality results**: [link](https://github.com/massbays-tech/intro-to-r/data/Training_Results.xlsx)
--   **Sample Data quality objectives for accuracy**: [link](https://github.com/massbays-tech/intro-to-r/data/Training_DQOAccuracy.xlsx)
--   **Sample Data quality objectives for frequency and completeness**: [link](https://github.com/massbays-tech/intro-to-r/data/Training_DQOFreqComp.xlsx)
--   **Sample Site metadata**: [link](https://github.com/massbays-tech/intro-to-r/data/Training_Sites.xlsx)
--   **Sample WQX metadata**: [link](https://github.com/massbays-tech/intro-to-r/data/Training_WQXMeta.xlsx)
+-   Training Script R file: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/MassWateR_Training_script.R)
+-   Training Script txt file: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/MassWateR_Training_script.txt)
+-   **Sample Surface water quality results**: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/Training_Results.xlsx)
+-   **Sample Data quality objectives for accuracy**: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/Training_DQOAccuracy.xlsx)
+-   **Sample Data quality objectives for frequency and completeness**: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/Training_DQOFreqComp.xlsx)
+-   **Sample Site metadata**: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/Training_Sites.xlsx)
+-   **Sample WQX metadata**: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/Training_WQXMeta.xlsx)
 -   WQX Upload template: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/WQX_Phys-Chem_Template_for_MassWateR.xlsx)
 -   Parameter mapping: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ParameterMapping.xlsx)
 -   Parameter thresholds: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ThresholdMapping.xlsx)
