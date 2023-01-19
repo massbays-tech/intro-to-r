@@ -2,7 +2,7 @@
 title: "Setup R and RStudio"
 ---
 
-Thanks for your interest in the [MassWateR](https://massbays-tech.github.io/MassWateR) R package. For the package workshops, we will be using [RStudio](https://www.rstudio.com/) as our interface to R. In order to participate in this testing, you will need to make sure you have R and RStudio installed on your computer.
+Thanks for your interest in the [MassWateR](https://massbays-tech.github.io/MassWateR) R package. We recommend [RStudio](https://www.rstudio.com/) as the interface to R. In order to use the package, you will need to make sure you have R and RStudio installed on your computer.
 
 Thanks to the [USGS-R Training group](https://owi.usgs.gov/R/training.html) and [Data Carpentry](https://datacarpentry.org/R-ecology-lesson/index.html) for making their installation materials available. The following instructions come directly from their materials, with a few minor edits to help you get set up.
 
