@@ -13,4 +13,4 @@ The following resources are available for training and testing. Please download 
 -   **Sample WQX metadata**: [link](https://github.com/massbays-tech/intro-to-r/data/Training_WQXMeta.xlsx)
 -   Parameter mapping: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ParameterMapping.xlsx)
 -   Parameter thresholds: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ThresholdMapping.xlsx)
--   Test
+-   Intro to MassWateR slide deck: [link](https://massbays-tech.github.io/intro-to-r){target="_blank"} (visit the [official website](https://massbays-tech.github.io/MassWateR) for detailed info)
