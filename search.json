@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "The following resources are available to support this website. Please download and save copies to your computer as needed.\n\nSurface water quality results: link\nData quality objectives for accuracy: link\nData quality objectives for frequency and completeness: link\nSite metadata: link\nWQX metadata: link\nParameter mapping: link\nParameter thresholds: link"
-  },
-  {
     "objectID": "index.html#rstudio",
     "href": "index.html#rstudio",
     "title": "Introduction to R for MassWateR",
@@ -18,14 +11,14 @@
     "href": "index.html#r-language-fundamentals",
     "title": "Introduction to R for MassWateR",
     "section": "R language fundamentals",
-    "text": "R language fundamentals\nR is built around functions. The basic syntax of a function follows the form: function_name(arg1, arg2, ...).\nWith the base install, you will gain access to many functions (2320, to be exact). Some examples:\n\n# print\nprint(\"hello world!\")\n\n[1] \"hello world!\"\n\n# sequence\nseq(1, 10)\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n# random numbers\nrnorm(100, mean = 10, sd = 2)\n\n  [1] 10.575121  8.986295  8.533262  6.557791 12.010006 12.475279  4.633074\n  [8] 13.105387  6.969701 10.334454  9.960702 10.641907 11.247305  8.473424\n [15]  9.746507 11.654680 12.444534 12.654541  8.966685 11.648066 10.197395\n [22]  8.659863  5.710671 10.339651 10.170721 11.786066  7.654493 12.688725\n [29] 11.445922  9.609668  9.325487  8.022741 10.736977 11.060492 13.954973\n [36] 12.595587 10.412782 11.132138  9.062448 10.433396  7.406140  9.698864\n [43]  9.676885 14.825042 12.504427 10.879690  8.827274 11.235531  9.430564\n [50]  6.201194  9.862411 10.380466 10.797448  8.314805  6.019753  7.141399\n [57]  9.807595  8.909221  9.511692 10.194043  5.344072  7.630407  8.468710\n [64] 11.905661 10.690264 10.654766  9.288281 10.419814  9.520141  7.632294\n [71]  5.147383  8.345978 13.862569 11.775391  6.535589  9.545213 10.121256\n [78]  5.241409 14.348936  7.555384 10.285662 11.791276  9.584785 11.748871\n [85] 11.374671 10.119616  8.867895  7.678221 11.104865  7.164056  5.970442\n [92]  9.276812 10.364168 11.471263 12.044226  6.881600 14.682008 11.699881\n [99] 15.088842 15.744407\n\n# average \nmean(rnorm(100))\n\n[1] -0.002183773\n\n# sum\nsum(rnorm(100))\n\n[1] 7.659553\n\n\nVery often you will see functions used like this:\n\nmy_random_sum <- sum(rnorm(100))\n\nThe first part of the line is the name of an object that you make up. The second bit, <-, is the assignment operator. This tells R to take the result of sum(rnorm(100)) and store it in an object named, my_random_sum. It is stored in the environment and can be used by just executing it’s name in the console.\n\nmy_random_sum\n\n[1] -2.735871\n\n\n\nWhat is the environment?\nThere are two outcomes when you run code. First, the code will simply print output directly in the console. Second, there is no output because you have stored it as a variable using <-. Output that is stored is saved in the environment. The environment is the collection of named objects that are stored in memory for your current R session."
+    "text": "R language fundamentals\nR is built around functions. The basic syntax of a function follows the form: function_name(arg1, arg2, ...).\nWith the base install, you will gain access to many functions (2320, to be exact). Some examples:\n\n# print\nprint(\"hello world!\")\n\n[1] \"hello world!\"\n\n# sequence\nseq(1, 10)\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n# random numbers\nrnorm(100, mean = 10, sd = 2)\n\n  [1] 15.741794  8.726493 12.490366 10.285263  6.528675  8.681222 10.294411\n  [8]  9.418040 11.255808  9.615455  9.258477  8.044291  8.608885 11.810603\n [15] 10.559498  7.640677 11.364567 10.641756  7.796613  8.011468  8.104205\n [22] 11.714296  5.969174 13.150779 12.934678 11.586697  9.781706  6.467325\n [29] 12.571796  9.849478 12.068021 11.130363 10.743554 11.589646  9.218136\n [36] 12.773326  9.309280 12.268036  8.747602  5.977417 10.357894  8.879854\n [43]  8.746657 11.417802  9.118796 10.605099  9.673070 12.036101  8.469110\n [50] 12.275503  9.845916 10.032645  5.917249  8.987514 12.055855 15.502926\n [57]  8.591639 10.257432 11.089181 12.396777 10.437956 11.379103  9.236307\n [64] 13.101922 12.790365  7.334769  9.454593 11.673907 11.455877 11.393057\n [71] 10.026391  7.897828  9.300334 11.282115  8.145835 13.446070 14.571499\n [78] 10.465953  8.780180 14.308307 10.044905  9.865820 11.418747 12.339749\n [85] 10.001703 12.855104  9.858632  9.924516 10.450827 11.439305 11.499693\n [92] 12.534799  8.079039  9.880702 11.486346  6.513038 10.684818  9.912418\n [99]  9.278577  9.410170\n\n# average \nmean(rnorm(100))\n\n[1] -0.06319742\n\n# sum\nsum(rnorm(100))\n\n[1] -13.99206\n\n\nVery often you will see functions used like this:\n\nmy_random_sum <- sum(rnorm(100))\n\nThe first part of the line is the name of an object that you make up. The second bit, <-, is the assignment operator. This tells R to take the result of sum(rnorm(100)) and store it in an object named, my_random_sum. It is stored in the environment and can be used by just executing it’s name in the console.\n\nmy_random_sum\n\n[1] 5.372311\n\n\n\nWhat is the environment?\nThere are two outcomes when you run code. First, the code will simply print output directly in the console. Second, there is no output because you have stored it as a variable using <-. Output that is stored is saved in the environment. The environment is the collection of named objects that are stored in memory for your current R session."
   },
   {
     "objectID": "index.html#packages",
     "href": "index.html#packages",
     "title": "Introduction to R for MassWateR",
     "section": "Packages",
-    "text": "Packages\nThe base installation of R is quite powerful. Packages allow you to include new methods for use in R.\n\nCRAN\nMany packages are available on CRAN, The Comprehensive R Archive Network. This is where you download R and also where most will gain access to packages. As of 2023-01-13, there are 19019 packages on CRAN!\n\n\nInstalling packages\nWhen a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you.\nWe use the install.packages() function to download and install a package. Here, we install the readxl package, used below.\n\ninstall.packages(\"readxl\")\n\nYou should see some text in the R console showing progress of the installation and a prompt after installation is done.\nAfter installation, you can load a package using the library() function. This makes all functions in a package available for you to use.\n\nlibrary(readxl)\n\nWe also want to install MassWateR from CRAN.\n\n# Install the package\ninstall.packages(\"MassWateR\")\n\nAn important aspect of packages is that you only need to download them once, but every time you start RStudio you need to load them with the library() function."
+    "text": "Packages\nThe base installation of R is quite powerful. Packages allow you to include new methods for use in R.\n\nCRAN\nMany packages are available on CRAN, The Comprehensive R Archive Network. This is where you download R and also where most will gain access to packages. As of 2023-01-19, there are 19066 packages on CRAN!\n\n\nInstalling packages\nWhen a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you.\nWe use the install.packages() function to download and install a package. Here, we install the readxl package, used below.\n\ninstall.packages(\"readxl\")\n\nYou should see some text in the R console showing progress of the installation and a prompt after installation is done.\nAfter installation, you can load a package using the library() function. This makes all functions in a package available for you to use.\n\nlibrary(readxl)\n\nWe also want to install MassWateR from CRAN.\n\n# Install the package\ninstall.packages(\"MassWateR\")\n\nAn important aspect of packages is that you only need to download them once, but every time you start RStudio you need to load them with the library() function."
   },
   {
     "objectID": "index.html#data-structures-in-r",
@@ -47,13 +40,6 @@
     "title": "Introduction to R for MassWateR",
     "section": "Summary",
     "text": "Summary\nIn this intro we learned about R and Rstudio, some of the basic syntax and data structures in R, and how to import files."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This website provides a short introduction to R for workshops on the MassWateR R package.\n\n\n\n\n\nAll website content created by Marcus Beck."
   },
   {
     "objectID": "setup.html",
@@ -89,5 +75,19 @@
     "title": "Setup R and RStudio",
     "section": "Posit Cloud (optional)",
     "text": "Posit Cloud (optional)\nIf you can’t install R or RStudio prior to the workshop, you can use use RStudio in the cloud on the Posit website. This is only a backup option and we strongly encourage you to troubleshoot the installation when able.\nTo use RStudio in the cloud, copy this link and paste it in a web browser: https://posit.cloud/project/4426781\nIf you do not have a Posit Cloud account, you will see this screen when you first visit the URL:\n\n\nYou can setup an account for free using a login you create or through a third-party (Google or GitHub).\nAfter your account is setup, you should a screen that looks something like this:\n\n\nYou’ll see that this is a TEMPORARY COPY under your account. Make it permanent by clicking the button on top. This will save any changes you make to this project under your account.\nThis project includes an installation of MassWateR that you can use for the workshop."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This website provides a short introduction to R for workshops on the MassWateR R package.\n\n\n\n\n\nAll website content created by Marcus Beck."
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "The following resources are available for training and testing. Please download and save copies to your computer as needed.\n\nSample Surface water quality results: link\nSample Data quality objectives for accuracy: link\nSample Data quality objectives for frequency and completeness: link\nSample Site metadata: link\nSample WQX metadata: link\nParameter mapping: link\nParameter thresholds: link"
   }
 ]
