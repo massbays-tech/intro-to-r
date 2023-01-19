@@ -63,9 +63,9 @@ Once installed, RStudio should be accessible from the start menu. Start up RStud
 
 ![](figure/rstudio.png)
 
-## Install MassWateR (optional)
+## Install MassWateR
 
-The MassWateR package can be installed from [CRAN](https://cran.r-project.org/) by running the code below in the RStudio console. The installation will also be covered during the workshop.
+The MassWateR package can be installed from [CRAN](https://cran.r-project.org/) by running the code below in the RStudio console. The installation will also be covered during training.
 
 ```{r}
 #| eval: false
@@ -73,7 +73,7 @@ The MassWateR package can be installed from [CRAN](https://cran.r-project.org/) 
 install.packages('MassWateR')
 ```
 
-The installation will take a minute or so to download.  You will see text and several messages in the console during the download.  Once it's finished, verify the installation worked by loading the package from your library. 
+The installation will take a minute or so to download.  You will see text and several messages in the console during the download.  Once it's finished, verify the installation worked by loading the package from your library.  Type the following code in the RStudio console. 
 
 ```{r}
 #| eval: false
