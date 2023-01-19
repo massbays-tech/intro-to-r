@@ -2,12 +2,12 @@
 title: "Resources"
 ---
 
-The following resources are available to support this website. Please download and save copies to your computer as needed.
+The following resources are available for training and testing. Please download and save copies to your computer as needed.
 
--   **Surface water quality results**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleResults.xlsx)
--   **Data quality objectives for accuracy**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleDQOAccuracy.xlsx)
--   **Data quality objectives for frequency and completeness**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleDQOFrequencyCompleteness.xlsx)
--   **Site metadata**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleSites.xlsx)
--   **WQX metadata**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleWQX.xlsx)
+-   **Sample Surface water quality results**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleResults.xlsx)
+-   **Sample Data quality objectives for accuracy**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleDQOAccuracy.xlsx)
+-   **Sample Data quality objectives for frequency and completeness**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleDQOFrequencyCompleteness.xlsx)
+-   **Sample Site metadata**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleSites.xlsx)
+-   **Sample WQX metadata**: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ExampleWQX.xlsx)
 -   Parameter mapping: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ParameterMapping.xlsx)
 -   Parameter thresholds: [link](https://github.com/massbays-tech/MassWateR/raw/main/inst/extdata/ThresholdMapping.xlsx)
