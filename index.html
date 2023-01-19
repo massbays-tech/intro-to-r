@@ -259,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="executing-code-in-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="executing-code-in-rstudio">Executing code in RStudio</h3>
-<p>After you write code in an R script, it can be sent to the Console to run the code. There are two ways to do this. First, you can hit the <code>Run</code> button at the top right of the scripting window. Second, you can use <code>ctrl+enter</code> (<code>cmd+enter</code> on a Mac).</p>
+<p>After you write code in an R script, it can be sent to the Console to run the code. There are two ways to do this. First, you can hit the <code>Run</code> button at the top right of the scripting window. Second, you can use <code>ctrl+enter</code> (<code>cmd+enter</code> on a Mac). Either option will run the line(s) of script that are selected.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="figure/rstudio_run.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="figure/rstudio_run.jpg" class="img-fluid figure-img"></a></p>
@@ -285,31 +285,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random numbers</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1]  7.724461  9.619669 12.666521  6.581649 14.702451  9.130327 11.371410
-  [8]  8.026336  9.975944 11.277036 10.752910 12.645648  9.818453  9.364830
- [15]  8.147460  7.584515  8.556391 10.051692  9.674588 11.475793 11.593613
- [22]  8.739796  7.678122 13.495376 13.093899  8.779192 13.624262  8.029151
- [29]  9.497059  9.398824  9.784629 13.246585 12.163765 11.804887 12.200670
- [36] 10.077566 11.269465  6.570007 12.378613  9.343166  8.975447 10.230606
- [43]  8.632819  6.778422 14.611947 10.442505  8.293762  9.110284 12.852730
- [50] 14.259553  8.367284 11.195211  9.557840 11.875350  8.420140  9.428902
- [57]  8.495142 15.503917 11.040860  9.635900 11.087265 10.793290 13.233915
- [64] 11.119225  8.981931  9.462171 12.629367 11.651758 10.794096  8.673806
- [71] 10.655406  8.446727  9.216990  8.227122 16.098756  7.633955 12.027995
- [78] 10.161094 10.280076  9.172610  6.628171  9.749961 11.761179 14.688390
- [85]  8.526669  7.800122 10.813850  7.567792  9.185395 11.596407 10.719438
- [92] 10.316434  7.056670  9.992597 10.205898 10.598839  9.473737  6.466072
- [99]  8.910504 11.581650</code></pre>
+<pre><code>  [1]  9.250173 10.987533  9.340622  9.372035 10.590798  6.755141 10.820510
+  [8] 11.393205 12.544015  8.193283  6.750107 11.099893 10.242492  9.587736
+ [15]  8.088873  8.852873 10.418988 10.350505 12.253768  7.956230 13.845094
+ [22]  9.904122  6.930453 10.955039  7.847080 10.793776  8.480661  7.173465
+ [29]  5.972044 11.127588  8.309745 13.215103  8.173436 10.906512 11.105710
+ [36] 10.287839  8.452102  5.952885 10.132803 12.333317  7.198180 10.134861
+ [43]  8.980122  9.053845  7.646130  6.534569 12.101180 11.093019 10.410067
+ [50] 10.324639 11.456186  6.194737  8.874215  8.667747 11.608320  6.126300
+ [57]  9.665868  7.685408 10.354445 10.087159 10.444822 12.495317  7.686930
+ [64]  8.756064  8.682241  9.516936 12.919331 10.173469 10.747827 12.436521
+ [71] 11.528207 11.358756 10.475390 10.677107  7.780886  9.243181 10.860456
+ [78]  8.943825 13.237958  7.635843 12.818344  8.904965 11.004603  5.983416
+ [85] 12.238354 11.279355  9.882579  9.272666  9.106466  7.629670  8.823268
+ [92]  8.362020 12.795496 13.222131 11.477434  7.819798  8.463009 11.107322
+ [99]  8.134883  9.542441</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># average </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.03692458</code></pre>
+<pre><code>[1] -0.004781652</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sum</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 7.351885</code></pre>
+<pre><code>[1] -13.60226</code></pre>
 </div>
 </div>
 <p>Very often you will see functions used like this:</p>
@@ -320,7 +320,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_random_sum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -29.18333</code></pre>
+<pre><code>[1] 5.439083</code></pre>
 </div>
 </div>
 <section id="what-is-the-environment" class="level3">
@@ -338,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="installing-packages" class="level3">
 <h3 class="anchored" data-anchor-id="installing-packages">Installing packages</h3>
 <p>When a package gets installed, that means the source code is downloaded and put into your library. A default library location is set for you.</p>
-<p>We use the <code>install.packages()</code> function to download and install a package. Here, we install the readxl package, used below.</p>
+<p>We use the <code>install.packages()</code> function to download and install a package. Here, we install the readxl package, used below, which is used to upload data from and Excel file.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -367,7 +367,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>log_var <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, T, F)</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>chr_var <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The four types of vectors are <code>double</code> (or numeric), <code>integer</code>, <code>logical</code>, and <code>character</code>. Each type has some useful properties:</p>
+<p>The four types of vectors are <code>double</code> (or numeric), <code>integer</code>, <code>logical</code>, and <code>character</code>. The following functions can return useful information about the vectors:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(dbl_var)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -381,7 +381,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="data-frames-two-dimensional-data" class="level3">
 <h3 class="anchored" data-anchor-id="data-frames-two-dimensional-data">Data frames (two-dimensional data)</h3>
-<p>A collection of vectors represented as one data object are often described as two-dimensional data, or in R speak, a data frame. Here’s a simple example:</p>
+<p>A collection of vectors represented as one data object are often described as two-dimensional data, like a spreadsheet, or in R speak, a data frame. Here’s a simple example:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>ltrs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
@@ -611,7 +611,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":true,"closeEffect":"zoom","selector":".lightbox"});</script>
 
 
 
