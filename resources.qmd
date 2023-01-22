@@ -5,7 +5,6 @@ title: "Resources"
 The following resources are available for training and testing. Please download and save copies to your computer as needed.
 
 -   Training Script R file: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/MassWateR_Training_script.R)
--   Training Script txt file: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/MassWateR_Training_script.txt)
 -   Intro to R Script: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/R_Training_script.R)
 -   **Sample Surface water quality results**: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/Training_Results.xlsx)
 -   **Sample Data quality objectives for accuracy**: [link](https://github.com/massbays-tech/intro-to-r/raw/main/data/Training_DQOAccuracy.xlsx)
