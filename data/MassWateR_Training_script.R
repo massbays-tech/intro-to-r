@@ -1,9 +1,5 @@
 
 # Install the MassWateR package - only necessary for updates ------------
-# options statement only needed if updates haven't been passed to CRAN ---
-options(repos = c(
-  massbaystech = 'https://massbays-tech.r-universe.dev',
-  CRAN = 'https://cloud.r-project.org'))
 
 install.packages('MassWateR')
 
@@ -17,7 +13,7 @@ library(MassWateR)
 
 # Load files --------------------------------------------------------------
 
-setwd("C:/Users/bweth/Desktop/MassWateR_Training")
+setwd("D:/Documents/1 ACASAK/MassWateR/Training")
 respth <- "Training_Results.xlsx"
 accpth <- "Training_DQOAccuracy.xlsx"
 frecompth <- "Training_DQOFreqComp.xlsx"
@@ -99,7 +95,6 @@ anlzMWRseason(fset = fsetls,param="DO",group="month",
   #geom_hline(yintercept = 3.0, color = "green")
   #theme_gray()
   #coord_cartesian(ylim = c(5,9))
-  #facet_wrap(~`Monitoring Location ID`)
   #coord_flip()
 
 
@@ -111,7 +106,7 @@ anlzMWRdate(fset = fsetls, param="pH", thresh="fresh",
 anlzMWRdate(fset = fsetls, param="pH", thresh="fresh",
             site=c("ABT-077","ABT-144","ABT-312")) 
             #repel=TRUE, colleg = TRUE, threshcol="red", ptsize = 3)
-            #group="locgroup")#, confint=TRUE)
+            #group="locgroup", confint=TRUE)
 
 
 
