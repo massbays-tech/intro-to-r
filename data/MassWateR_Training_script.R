@@ -13,7 +13,7 @@ library(MassWateR)
 
 # Load files --------------------------------------------------------------
 
-setwd("D:/Documents/1 ACASAK/MassWateR/Training")
+setwd("C:/Users/bweth/Desktop/MassWateR_Training")
 respth <- "Training_Results.xlsx"
 accpth <- "Training_DQOAccuracy.xlsx"
 frecompth <- "Training_DQOFreqComp.xlsx"
