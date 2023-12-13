@@ -13,7 +13,7 @@ library(MassWateR)
 
 # Load files --------------------------------------------------------------
 
-setwd("C:/Users/bweth/Desktop/MassWateR_Training")
+setwd("D:/OneDrive/Documents/1 ACASAK/MassWateR/Training")
 respth <- "Training_Results.xlsx"
 accpth <- "Training_DQOAccuracy.xlsx"
 frecompth <- "Training_DQOFreqComp.xlsx"
@@ -129,13 +129,13 @@ anlzMWRmap(fset = fsetls, param="DO")
 anlzMWRmap(fset = fsetls, param="DO", addwater = "high")
            #palcol = "Spectral", ptsize = 2, labsize = 2, latlon = FALSE) 
            #site = c("ABT-026","ABT-077"))
-           #maptype = "terrain-lines")
+           #maptype = "cartolight")
            #northloc = "tr", scaleloc = "tl")
            #locgroup = "Tributaries")
            #dtrng = c("2022-05-01","2022-07-31"))
 anlzMWRmap(fset = fsetls, param="pH", 
            palcol = "YlOrRd", buffdist = 5,
-           maptype = "terrain-background", addwater = NULL)
+           maptype = "cartolight", addwater = NULL)
 
 ggsave("BetaMap.png", plot = last_plot(), device = "png", 
        width = 6.5, height = 7, units = "in")
