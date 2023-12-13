@@ -127,7 +127,9 @@ anlzMWRsite(fset = fsetls,param="E.coli",type="jitterbar",
 anlzMWRmap(fset = fsetls, param="DO")
 
 anlzMWRmap(fset = fsetls, param="DO", addwater = "high")
-           #palcol = "Spectral", ptsize = 2, labsize = 2, latlon = FALSE) 
+           #palcol = "Spectral", ptsize = 2, labsize = 2, latlon = FALSE)
+           #palcolrev=TRUE)
+           #sumfun = "min")
            #site = c("ABT-026","ABT-077"))
            #maptype = "cartolight")
            #northloc = "tr", scaleloc = "tl")
